@@ -18,6 +18,7 @@ def convert_lower(w, i, len_w):
     
     return None
 
+
 def count_word_title(title, i, len_t, dict_words_unique):
     """Store repeating string in hash table"""
     if i >= len_t:
@@ -29,6 +30,7 @@ def count_word_title(title, i, len_t, dict_words_unique):
     count_word_title(title, i + 1, len_t, dict_words_unique)
     
     return None
+
 
 def store_title_word_hash(list_title, i, len_l, dict_words_unique):
     """Run trough a list of hot titles"""
@@ -42,6 +44,7 @@ def store_title_word_hash(list_title, i, len_l, dict_words_unique):
     store_title_word_hash(list_title, i + 1, len_l, dict_words_unique)
 
     return None
+
 
 def store_given_word_hash(w, i, len_w, dict_words, type_d):
     """store given words in hash tables"""
@@ -59,6 +62,7 @@ def store_given_word_hash(w, i, len_w, dict_words, type_d):
 
     return None
 
+
 def print_words(w, i, len_wn, dict_words_repeated):
     """Print the repeated strings"""
     if i >= len_wn:
@@ -70,6 +74,7 @@ def print_words(w, i, len_wn, dict_words_repeated):
     print_words(w, i + 1, len_wn, dict_words_repeated)
 
     return None
+
 
 def get_all_hot_articles(subreddit, word_list, dict_words_unique, after=""):
     """Get the all articles"""
@@ -90,6 +95,7 @@ def get_all_hot_articles(subreddit, word_list, dict_words_unique, after=""):
 
     after = r.json().get("data").get("after")
     return get_all_hot_articles(subreddit, word_list, dict_words_unique, after)
+
 
 def count_words(subreddit, word_list):
     """Count the number of time a word in word_list is name
