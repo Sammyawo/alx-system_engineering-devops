@@ -1,13 +1,8 @@
 #!/usr/bin/env bash
 # This script is displaying "Best School" 10 times
-i=10
-while [ "$i" -gt 0 ]
+i=0
+for i in {1..10}
 do
     echo "Best School"
-    if [ "$i" -eq 2 ]
-    then
-        echo "Hi"
-    fi
-    i=$((i - 1))
 done
 i=$i
